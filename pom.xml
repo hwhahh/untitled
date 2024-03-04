@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.6</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.bdsoft</groupId>
+    <artifactId>web-ywgl</artifactId>
+    <version>0.0.1</version>
+    <name>web-ywgl</name>
+    <description>spingboot</description>
+    <properties>
+        <java.version>8</java.version>
+        <spring.boot.version>2.5.4</spring.boot.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <mysql-connector.version>8.0.29</mysql-connector.version>
+        <lombok.version>1.18.22</lombok.version>
+
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Web Starter，用于构建Web应用程序 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot 测试 Starter，用于编写测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- MyBatis Plus 依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+
+
+        <!-- Lombok 依赖，简化Java代码的编写 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+
+        <!--Mysql数据库驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <!--使用aliyun的Maven镜像源提升下载速度-->
+    <repositories>
+        <repository>
+            <id>aliyunmaven</id>
+            <name>aliyun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>central2</id>
+            <name>central2</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+</project>
